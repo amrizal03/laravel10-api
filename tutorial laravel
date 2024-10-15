@@ -1,0 +1,39 @@
+1. install composer
+    composer install
+    composer --version
+
+2. Membuat project laravel
+    composer create-project --prefer-dist laravel/laravel:^10.0 namafoldernya
+    cth:
+    composer create-project --prefer-dist laravel/laravel:^10.0 laravel10-api
+3. Menjalankan project
+    php artisan serve
+4. Menjalankan storage link
+    php artisan storage:link
+
+5. Membuat api resources
+    php artisan make:resource PostResource
+6. Membuat database setting config .env
+7. Membuat Model dan Migration
+    php artisan make:model Post -m
+8. Menambahkan Field / Kolom di Migration
+    edit file: database/migrations/2024_10_15_060807_create_posts_table.php
+9. Menambahkan Mass Assignment di Model
+    edit file: app/Models/Post.php
+10. Menjalankan proses migrate
+    php artisan migrate
+11. Membuat Accessor untuk attribute Image di Model post
+    edit file: app/Models/Post.php
+    tambahkan method image di file tersebut untuk modification image
+12. Menampilkan data dari database
+    *buat controlller
+    php artisan make:controller Api/PostController
+    lalu edit file PostController tersebut
+13. Membuat Route API
+    edit file: routes/api.php
+    lalu jalankan : php artisan route:list
+    untuk melihat route list nya
+14. uji coba rest api menampilkan data
+    open postman and hit url: http://localhost:8000/api/posts
+
+
